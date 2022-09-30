@@ -54,6 +54,26 @@ class Artist:
         for i in range (180):
             self.t.left(1)
             self.t.forward(1/3)
+
+    def cross(self):
+        for i in range (3):
+            self.t.right(90)
+            self.t.forward(25)
+        self.t.left(90)
+        for i in range (3):
+            self.t.forward(25)
+            self.t.right(90)
+        self.t.left(180)
+        for i in range (3):
+            self.t.forward(25)
+            self.t.right(90)
+        self.t.left(180)
+        self.t.forward(50)
+        self.t.right(90)
+        self.t.forward(25)
+        self.t.right(90)
+        self.t.forward(50)
+            
             
 def main():
     canvas = turtle.Screen()
@@ -63,6 +83,7 @@ def main():
     t.shape("turtle")
     t.speed(0)
     art = Artist(t)
+    art.cross()
     art.smile()
     art.circle()
     art.square()
